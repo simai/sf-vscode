@@ -1,0 +1,48 @@
+{
+  "name": "sf-vscode",
+  "displayName": "SF Modifier Suggestions",
+  "description": "Extension for SF Modifier Tips",
+  "version": "0.0.1",
+  "publisher": "SIMAI",
+  "repository": "https://github.com/simai/sf-vscode",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:css",
+    "onLanguage:scss",
+    "onLanguage:sass",
+    "onLanguage:less",
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:vue",
+    "onLanguage:react"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "compile": "tsc -p ./",
+    "generate": "tsc ./src/generate/generateJson.ts && node ./src/generate/generateJson.js",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "clean": "rm -rf out",
+    "test": "node ./out/test/runTest.js",
+    "lint": "eslint \"src/**/*.{ts,js}\"",
+    "prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.1",
+    "@types/vscode": "^1.95.0",
+    "eslint": "^8.57.1",
+    "globals": "^15.13.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.17.0"
+  }
+}
