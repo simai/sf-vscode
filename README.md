@@ -1,4 +1,4 @@
-# VS Code Extension for SF5
+# VS Code Extension for SF
 
 ## Running the Extension for Debugging
 
@@ -7,7 +7,7 @@
 $ npm install
 ```
 
-#### 2. Generate a JSON File with SF5 Modifiers for the Extension to Work
+#### 2. Generate a JSON File with SF Modifiers for the Extension to Work
 ```sh
 $ npm run generate
 ```
